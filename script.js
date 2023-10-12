@@ -1,5 +1,11 @@
 function minDate(dates) {
-  //write you code here
+  const newArr = dates.map(date => new Date(date));
+	let min = 0;
+
+	for(const date in newArr){
+		if(newArr[min] > newArr[date]) min = date;
+	}
+	return dates[min];	
 }
 
 // Do not change the code
